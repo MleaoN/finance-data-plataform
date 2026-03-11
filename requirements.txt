@@ -1,0 +1,7 @@
+requests
+wbgapi
+pandas
+SQLAlchemy
+yfinance
+psycopg2-binary
+dotenv

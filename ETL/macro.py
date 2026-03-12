@@ -5,6 +5,11 @@ import wbgapi as wb
 from typing import List, Dict
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
+from ETL.db_utils import (
+    get_or_create_country,
+    get_or_create_indicator,
+    insert_macro_record
+)
 
 # ---------------------------------------------------------
 # Load environment variables
@@ -98,7 +103,6 @@ def fetch_worldbank_macro_bundle(countries: List[str], start_year: int, end_year
 
 def load_wb_macro_raw(df: pd.DataFrame) -> None:
     df = df.copy()
-    df["raw_json"] = df["raw_json"].apply(json.dumps)
 
     df.to_sql(
         "wb_macro_raw",
@@ -107,7 +111,36 @@ def load_wb_macro_raw(df: pd.DataFrame) -> None:
         index=False,
         method="multi",
     )
+def load_macro_to_db(df):
+    for _, row in df.iterrows():
 
+        # Skip rows with missing year
+        if pd.isna(row["year"]):
+            continue
+
+        # Skip rows with missing value
+        if pd.isna(row["value"]):
+            continue
+
+        country_id = get_or_create_country(
+            iso_code=row["country_code"],
+            name=row["country_name"]
+        )
+
+        indicator_id = get_or_create_indicator(
+            code=row["indicator_code"],
+            name=row["indicator_name"]
+        )
+
+        insert_macro_record(
+            country_id=country_id,
+            indicator_id=indicator_id,
+            year=int(row["year"]),
+            value=row["value"]
+        )
+
+    print("✅ Macro data loaded into database")
+    print(f"Inserted {len(df)} macro records into normalized tables")
 # ---------------------------------------------------------
 # Main
 # ---------------------------------------------------------
@@ -118,4 +151,9 @@ if __name__ == "__main__":
         start_year=2000,
         end_year=2024,
     )
+
+    # Load raw JSON
     load_wb_macro_raw(df)
+
+    # Load normalized schema
+    load_macro_to_db(df)

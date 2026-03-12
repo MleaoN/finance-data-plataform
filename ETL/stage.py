@@ -1,7 +1,5 @@
 import os
-import json
 import pandas as pd
-import re
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
 
@@ -16,115 +14,70 @@ if not DB_URL:
 
 engine = create_engine(DB_URL)
 
-
 # ---------------------------------------------------------
-# JSON Normalization Helper
+# Stage macro data (from normalized tables)
 # ---------------------------------------------------------
-def load_raw_json(value):
-    """
-    Safely load JSON from the database, handling:
-    - double-encoded JSON
-    - JSON strings inside JSON
-    - lists containing dicts
-    - malformed JSON
-    """
-    try:
-        obj = json.loads(value)
+def stage_macro_timeseries():
+    print("Staging macro timeseries...")
 
-        # Case: JSON is still a string → decode again
-        if isinstance(obj, str):
-            obj = json.loads(obj)
-
-        # Case: JSON is a list → take first element
-        if isinstance(obj, list) and len(obj) > 0:
-            obj = obj[0]
-
-        # Only return dicts
-        return obj if isinstance(obj, dict) else {}
-
-    except Exception:
-        return {}
-
-
-# ---------------------------------------------------------
-# Stage macro values
-# ---------------------------------------------------------
-def stage_macro_values():
-    print("Staging macro values...")
-
-    df = pd.read_sql(
-        "SELECT country_code, indicator_code, raw_json FROM wb_macro_raw",
-        engine
-    )
-
-    records = []
-
-    for _, row in df.iterrows():
-        raw = load_raw_json(row["raw_json"])
-
-        # Iterate over keys like YR2000, YR2001, etc.
-        for key, val in raw.items():
-            if re.match(r"YR\d{4}", key):
-                year = int(key.replace("YR", ""))
-
-                if val not in (None, "", "null"):
-                    try:
-                        value = float(val)
-                    except Exception:
-                        continue  # skip non-numeric values
-
-                    records.append({
-                        "country_code": row["country_code"],
-                        "indicator_code": row["indicator_code"],
-                        "year": year,
-                        "value": value,
-                    })
-
-    out = pd.DataFrame(records)
-
-    out.to_sql(
-        "fact_macro_value",
-        engine,
-        if_exists="replace",
-        index=False,
-    )
-
-    print(f"Inserted {len(out)} macro value records.")
-
-
-# ---------------------------------------------------------
-# Stage market values
-# ---------------------------------------------------------
-def stage_market_values():
-    print("Staging market values...")
-
-    df = pd.read_sql(
-        """
-        SELECT label, date, close, volume
-        FROM market_raw
-        WHERE close IS NOT NULL
-        """,
-        engine
-    )
+    df = pd.read_sql("""
+        SELECT 
+            c.iso_code AS country,
+            i.code AS indicator,
+            m.year,
+            m.value
+        FROM macro_data m
+        JOIN countries c ON m.country_id = c.country_id
+        JOIN indicators i ON m.indicator_id = i.indicator_id
+        ORDER BY c.iso_code, i.code, m.year
+    """, engine)
 
     df.to_sql(
-        "fact_market_value",
+        "stage_macro_timeseries",
         engine,
         if_exists="replace",
-        index=False,
+        index=False
     )
 
-    print(f"Inserted {len(df)} market value records.")
-
+    print(f"Inserted {len(df)} staged macro records.")
 
 # ---------------------------------------------------------
-# Run both staging steps
+# Stage market data (from normalized tables)
+# ---------------------------------------------------------
+def stage_market_daily():
+    print("Staging market daily data...")
+
+    df = pd.read_sql("""
+        SELECT 
+            t.symbol,
+            t.name AS label,
+            s.date,
+            s.open,
+            s.high,
+            s.low,
+            s.close,
+            s.volume
+        FROM stock_prices s
+        JOIN tickers t ON s.ticker_id = t.ticker_id
+        ORDER BY t.symbol, s.date
+    """, engine)
+
+    df.to_sql(
+        "stage_market_daily",
+        engine,
+        if_exists="replace",
+        index=False
+    )
+
+    print(f"Inserted {len(df)} staged market records.")
+
+# ---------------------------------------------------------
+# Run staging
 # ---------------------------------------------------------
 def run_stage():
-    stage_macro_values()
-    stage_market_values()
+    stage_macro_timeseries()
+    stage_market_daily()
     print("Staging complete.")
-
 
 if __name__ == "__main__":
     run_stage()

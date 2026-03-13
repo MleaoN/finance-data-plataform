@@ -1,46 +1,24 @@
-import os
-import json
 import pandas as pd
 import wbgapi as wb
-from typing import List, Dict
-from sqlalchemy import create_engine
-from dotenv import load_dotenv
+
 from ETL.db_utils import (
     get_or_create_country,
     get_or_create_indicator,
-    insert_macro_record
+    insert_macro_record,
+)
+from ETL.etl_utils import (
+    engine,
+    WORLD_BANK_INDICATORS,
+    COUNTRIES,
+    log_step,
+    safe_json,
 )
 
 # ---------------------------------------------------------
-# Load environment variables
-# ---------------------------------------------------------
-load_dotenv()
-
-DB_URL = os.getenv("DB_URL")
-if not DB_URL:
-    raise ValueError("Environment variable DB_URL is missing. Add it to your .env file.")
-
-engine = create_engine(DB_URL)
-
-# ---------------------------------------------------------
-# Constants
+# Extract
 # ---------------------------------------------------------
 
-WORLD_BANK_INDICATORS: Dict[str, str] = {
-    "NY.GDP.MKTP.KD.ZG": "gdp_growth",
-    "FP.CPI.TOTL.ZG": "inflation",
-    "SL.UEM.TOTL.ZS": "unemployment",
-    "GC.DOD.TOTL.GD.ZS": "debt_gdp",
-    "BN.CAB.XOKA.GD.ZS": "current_account_gdp",
-}
-
-COUNTRIES = ["BRA", "USA", "CAN", "MEX", "CHN", "IND"]
-
-# ---------------------------------------------------------
-# Fetch and normalize one indicator
-# ---------------------------------------------------------
-
-def fetch_indicator(indicator_code: str, countries: List[str], start_year: int, end_year: int) -> pd.DataFrame:
+def fetch_indicator(indicator_code: str, countries, start_year: int, end_year: int) -> pd.DataFrame:
     df = wb.data.DataFrame(
         indicator_code,
         countries,
@@ -55,55 +33,61 @@ def fetch_indicator(indicator_code: str, countries: List[str], start_year: int, 
 
     df = df.reset_index()
 
-    rename_map = {}
+    # Rename country column
     if "economy" in df.columns:
-        rename_map["economy"] = "country_code"
-    if "Time" in df.columns:
-        rename_map["Time"] = "year"
-    if indicator_code in df.columns:
-        rename_map[indicator_code] = "value"
+        df = df.rename(columns={"economy": "country_code"})
 
-    df = df.rename(columns=rename_map)
+    # Identify year columns like YR2000, YR2001...
+    year_cols = [c for c in df.columns if c.startswith("YR")]
 
-    for col in ["country_code", "year", "value"]:
-        if col not in df.columns:
-            df[col] = None
+    # Melt into long format
+    df_long = df.melt(
+        id_vars=["country_code"],
+        value_vars=year_cols,
+        var_name="year",
+        value_name="value"
+    )
 
-    df["indicator_code"] = indicator_code
-    df["indicator_name"] = wb.series.get(indicator_code)["value"]
+    # Convert YR2000 → 2000
+    df_long["year"] = df_long["year"].str.replace("YR", "").astype(int)
 
+    # Add indicator metadata
+    df_long["indicator_code"] = indicator_code
+    df_long["indicator_name"] = wb.series.get(indicator_code)["value"]
+
+    # Add country name
     def safe_country_name(code):
         try:
             return wb.economy.get(code)["value"]
-        except Exception:
+        except:
             return None
 
-    df["country_name"] = df["country_code"].apply(safe_country_name)
-    df["raw_json"] = df.apply(lambda row: json.dumps(row.to_dict()), axis=1)
+    df_long["country_name"] = df_long["country_code"].apply(safe_country_name)
 
-    return df[[
+    # Raw JSON
+    df_long["raw_json"] = df_long.apply(lambda row: safe_json(row.to_dict()), axis=1)
+
+    return df_long[[
         "country_code", "country_name", "indicator_code",
         "indicator_name", "year", "value", "raw_json"
     ]]
 
-# ---------------------------------------------------------
-# Fetch all indicators
-# ---------------------------------------------------------
-
-def fetch_worldbank_macro_bundle(countries: List[str], start_year: int, end_year: int) -> pd.DataFrame:
+def extract_macro(start_year: int, end_year: int) -> pd.DataFrame:
+    log_step("Fetching World Bank macroeconomic indicators...")
     frames = [
-        fetch_indicator(code, countries, start_year, end_year)
+        fetch_indicator(code, COUNTRIES, start_year, end_year)
         for code in WORLD_BANK_INDICATORS
     ]
-    return pd.concat(frames, ignore_index=True)
+    df = pd.concat(frames, ignore_index=True)
+    log_step(f"Fetched {len(df)} macro records.")
+    return df
 
 # ---------------------------------------------------------
-# Load into Postgres
+# Load raw
 # ---------------------------------------------------------
 
-def load_wb_macro_raw(df: pd.DataFrame) -> None:
-    df = df.copy()
-
+def load_macro_raw(df: pd.DataFrame) -> None:
+    log_step("Loading raw macro data into wb_macro_raw...")
     df.to_sql(
         "wb_macro_raw",
         engine,
@@ -111,15 +95,18 @@ def load_wb_macro_raw(df: pd.DataFrame) -> None:
         index=False,
         method="multi",
     )
-def load_macro_to_db(df):
+    log_step("Raw macro data loaded.")
+
+# ---------------------------------------------------------
+# Load normalized
+# ---------------------------------------------------------
+
+def load_macro_normalized(df: pd.DataFrame) -> None:
+    log_step("Loading normalized macro data...")
+
+    count = 0
     for _, row in df.iterrows():
-
-        # Skip rows with missing year
-        if pd.isna(row["year"]):
-            continue
-
-        # Skip rows with missing value
-        if pd.isna(row["value"]):
+        if pd.isna(row["year"]) or pd.isna(row["value"]):
             continue
 
         country_id = get_or_create_country(
@@ -138,22 +125,19 @@ def load_macro_to_db(df):
             year=int(row["year"]),
             value=row["value"]
         )
+        count += 1
 
-    print("✅ Macro data loaded into database")
-    print(f"Inserted {len(df)} macro records into normalized tables")
+    log_step(f"Inserted {count} normalized macro records.")
+
 # ---------------------------------------------------------
-# Main
+# Airflow entrypoint
 # ---------------------------------------------------------
 
-if __name__ == "__main__":
-    df = fetch_worldbank_macro_bundle(
-        countries=COUNTRIES,
-        start_year=2000,
-        end_year=2024,
-    )
+def run_macro_etl(start_year=2000, end_year=2024):
+    log_step("Starting MACRO ETL pipeline...")
 
-    # Load raw JSON
-    load_wb_macro_raw(df)
+    df = extract_macro(start_year, end_year)
+    load_macro_raw(df)
+    load_macro_normalized(df)
 
-    # Load normalized schema
-    load_macro_to_db(df)
+    log_step("MACRO ETL pipeline completed.")

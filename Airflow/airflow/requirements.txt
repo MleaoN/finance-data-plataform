@@ -1,0 +1,8 @@
+apache-airflow==2.9.0
+apache-airflow-providers-postgres
+pandas
+sqlalchemy
+psycopg2-binary
+python-dotenv
+wbgapi
+yfinance

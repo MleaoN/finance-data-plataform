@@ -1,26 +1,14 @@
-import os
 import pandas as pd
-from sqlalchemy import create_engine
-from dotenv import load_dotenv
+from ETL.etl_utils import engine, log_step
 
 # ---------------------------------------------------------
-# Load environment variables
+# Stage macro data
 # ---------------------------------------------------------
-load_dotenv()
 
-DB_URL = os.getenv("DB_URL")
-if not DB_URL:
-    raise ValueError("Environment variable DB_URL is missing. Add it to your .env file.")
-
-engine = create_engine(DB_URL)
-
-# ---------------------------------------------------------
-# Stage macro data (from normalized tables)
-# ---------------------------------------------------------
 def stage_macro_timeseries():
-    print("Staging macro timeseries...")
+    log_step("Staging macro timeseries...")
 
-    df = pd.read_sql("""
+    query = """
         SELECT 
             c.iso_code AS country,
             i.code AS indicator,
@@ -30,7 +18,9 @@ def stage_macro_timeseries():
         JOIN countries c ON m.country_id = c.country_id
         JOIN indicators i ON m.indicator_id = i.indicator_id
         ORDER BY c.iso_code, i.code, m.year
-    """, engine)
+    """
+
+    df = pd.read_sql(query, engine)
 
     df.to_sql(
         "stage_macro_timeseries",
@@ -39,15 +29,16 @@ def stage_macro_timeseries():
         index=False
     )
 
-    print(f"Inserted {len(df)} staged macro records.")
+    log_step(f"Inserted {len(df)} staged macro records.")
 
 # ---------------------------------------------------------
-# Stage market data (from normalized tables)
+# Stage market data
 # ---------------------------------------------------------
+
 def stage_market_daily():
-    print("Staging market daily data...")
+    log_step("Staging market daily data...")
 
-    df = pd.read_sql("""
+    query = """
         SELECT 
             t.symbol,
             t.name AS label,
@@ -60,7 +51,9 @@ def stage_market_daily():
         FROM stock_prices s
         JOIN tickers t ON s.ticker_id = t.ticker_id
         ORDER BY t.symbol, s.date
-    """, engine)
+    """
+
+    df = pd.read_sql(query, engine)
 
     df.to_sql(
         "stage_market_daily",
@@ -69,15 +62,16 @@ def stage_market_daily():
         index=False
     )
 
-    print(f"Inserted {len(df)} staged market records.")
+    log_step(f"Inserted {len(df)} staged market records.")
 
 # ---------------------------------------------------------
-# Run staging
+# Airflow entrypoint
 # ---------------------------------------------------------
-def run_stage():
+
+def run_stage_etl():
+    log_step("Starting STAGING ETL pipeline...")
+
     stage_macro_timeseries()
     stage_market_daily()
-    print("Staging complete.")
 
-if __name__ == "__main__":
-    run_stage()
+    log_step("STAGING ETL pipeline completed.")

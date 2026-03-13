@@ -57,26 +57,38 @@ This ensures **reproducible, dependency-aware execution** of the entire pipeline
 FINANCE_DATA_PLATFORM/
 │
 ├── Airflow/
-│   ├── airflow/                 # Custom Airflow image
+│   │
+│   ├── airflow/                     # Custom Airflow image
 │   │   ├── Dockerfile
 │   │   └── requirements.txt
 │   │
-│   ├── dags/                    # Airflow DAG definitions
+│   ├── dags/                        # Airflow DAG definitions
 │   │   ├── full_pipeline_dag.py
 │   │   ├── macro_etl_dag.py
 │   │   ├── market_etl_dag.py
 │   │   └── staging_etl_dag.py
 │   │
-│   ├── ETL/                     # Python ETL modules used by DAGs
-│   │   ├── macro.py
-│   │   ├── stocks.py
-│   │   ├── stage.py
-│   │   └── etl_utils.py
-│   │
-│   └── docker-compose.yml       # Airflow + Postgres services
+│   ├── docker-compose.yml           # Airflow services (webserver, scheduler, postgres)
+│   └── .env                         # Airflow environment variables (not committed)
 │
-├── README.md
-└── .gitignore
+├── ETL/                             # Core ETL modules used by Airflow
+│   ├── __init__.py
+│   ├── macro.py                     # World Bank macroeconomic ingestion
+│   ├── stocks.py                    # Market data ingestion
+│   ├── stage.py                     # Staging & normalization logic
+│   └── etl_utils.py                 # Shared helpers (DB connection, logging, validation)
+│
+├── db/
+│   └── schema.sql                   # Database schema definitions
+│
+├── .devcontainer/                   # VS Code Dev Container configuration
+│   ├── devcontainer.json
+│   └── Dockerfile
+│
+├── .env.example                     # Environment variable template
+├── .gitignore
+├── requirements.txt                 # Local development dependencies
+└── README.md
 ```
 
 ---

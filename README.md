@@ -1,30 +1,59 @@
-📘 Finance Data Platform — Airflow‑Orchestrated ETL (Work in Progress)
-A containerized data platform for collecting, transforming, and orchestrating financial and macroeconomic datasets.
-This new version introduces a full Airflow orchestration layer, a reorganized ETL module structure, and a scalable foundation for future analytics and data engineering components.
+# 📘 Finance Data Platform — Airflow-Orchestrated ETL (Work in Progress)
 
-🚀 What’s New in This Version
-✔ Airflow Orchestration Layer
-A fully containerized Airflow environment running:
-- Webserver
-- Scheduler
-- Postgres metadata database
-- Custom Airflow image with project‑specific Python dependencies
-- DAGs for macro, market, staging, and full‑pipeline orchestration
-✔ Modular ETL Architecture
-Located in the ETL/ directory:
-- macro.py — World Bank macroeconomic ingestion
-- stocks.py — market data ingestion
-- stage.py — staging and normalization logic
-- etl_utils.py — shared helpers (DB connections, validation, logging)
-✔ Full Pipeline DAG
-A unified DAG (full_pipeline_dag.py) orchestrates:
-- Extract
-- Transform
-- Stage
-- Load
-This ensures reproducible, dependency‑aware execution.
+A **containerized data platform** for collecting, transforming, and orchestrating financial and macroeconomic datasets.
 
-📂 Updated Project Structure
+This version introduces:
+
+* A full **Airflow orchestration layer**
+* A reorganized **modular ETL architecture**
+* A **Dockerized environment** for reproducible development
+* A scalable foundation for future **data engineering and analytics components**
+
+---
+
+# 🚀 What’s New in This Version
+
+## ✔ Airflow Orchestration Layer
+
+A fully containerized **Apache Airflow environment** running:
+
+* Webserver
+* Scheduler
+* PostgreSQL metadata database
+* Custom Airflow image with project-specific Python dependencies
+* DAGs for macro, market, staging, and full-pipeline orchestration
+
+---
+
+## ✔ Modular ETL Architecture
+
+ETL modules are organized inside the `ETL/` directory:
+
+* **macro.py** — World Bank macroeconomic ingestion
+* **stocks.py** — Market data ingestion
+* **stage.py** — Staging and normalization logic
+* **etl_utils.py** — Shared utilities (DB connections, validation, logging)
+
+This modular structure makes it easier to extend the pipeline and reuse components across workflows.
+
+---
+
+## ✔ Full Pipeline DAG
+
+A unified Airflow DAG (`full_pipeline_dag.py`) orchestrates:
+
+1. Extract
+2. Transform
+3. Stage
+4. Load
+
+This ensures **reproducible, dependency-aware execution** of the entire pipeline.
+
+---
+
+# 📂 Project Structure
+
+```
 FINANCE_DATA_PLATFORM/
 │
 ├── Airflow/
@@ -32,7 +61,7 @@ FINANCE_DATA_PLATFORM/
 │   │   ├── Dockerfile
 │   │   └── requirements.txt
 │   │
-│   ├── dags/                    # Airflow DAGs
+│   ├── dags/                    # Airflow DAG definitions
 │   │   ├── full_pipeline_dag.py
 │   │   ├── macro_etl_dag.py
 │   │   ├── market_etl_dag.py
@@ -48,52 +77,96 @@ FINANCE_DATA_PLATFORM/
 │
 ├── README.md
 └── .gitignore
+```
 
+---
 
+# 🛠 Tech Stack
 
-🛠 Tech Stack (Current)
-- Airflow 2.9
-- Python 3.11
-- Docker Compose
-- PostgreSQL
-- SQLAlchemy
-- Pandas
-- World Bank API (wbgapi)
-- Market Data APIs
+Current technologies used in the platform:
 
-▶️ Running the Airflow Platform
-From inside the Airflow/ directory:
+* **Apache Airflow 2.9**
+* **Python 3.11**
+* **Docker & Docker Compose**
+* **PostgreSQL**
+* **SQLAlchemy**
+* **Pandas**
+* **World Bank API (`wbgapi`)**
+* **Market Data APIs**
+
+---
+
+# ▶️ Running the Airflow Platform
+
+Navigate to the Airflow directory:
+
+```bash
+cd Airflow
+```
+
+Build the containers:
+
+```bash
 docker compose build
+```
+
+Start the platform:
+
+```bash
 docker compose up -d
+```
 
+---
 
-Then access the Airflow UI:
+## Access the Airflow UI
+
+Open:
+
+```
 http://localhost:8080
+```
 
+The default admin user is created automatically during initialization.
 
-Default admin user is created automatically during initialization.
+---
 
-🔐 Environment Variables
-Airflow uses a .env file (not committed to Git) for database and API configuration.
-Example:
+# 🔐 Environment Variables
+
+Sensitive configuration is stored in a `.env` file that is **not committed to Git**.
+
+Example configuration:
+
+```
 POSTGRES_USER=airflow
 POSTGRES_PASSWORD=airflow
 POSTGRES_DB=airflow
+```
 
+Make sure to create your own `.env` file before running the platform.
 
+---
 
-🧭 Roadmap
-This platform is actively evolving. Upcoming components include:
-- [ ] Spark cluster for distributed transformations
-- [ ] Data lake zones (raw, delta, curated)
-- [ ] Dashboard layer (Streamlit / Superset)
-- [ ] CI/CD pipeline
-- [ ] Monitoring & logging
-- [ ] Automated data quality checks (Great Expectations)
+# 🧭 Roadmap
 
-🤝 Contributing
-This is a personal learning and portfolio project.
-Suggestions, issues, and improvements are welcome.
+This platform is actively evolving. Planned components include:
 
-📄 License
+* [ ] **Apache Spark cluster** for distributed transformations
+* [ ] **Data lake architecture** (raw / delta / curated zones)
+* [ ] **Dashboard layer** (Dash / Streamlit / Superset)
+* [ ] **CI/CD pipeline** for automated deployment
+* [ ] **Monitoring and logging**
+* [ ] **Automated data quality checks** (Great Expectations)
+
+---
+
+# 🤝 Contributing
+
+This project is primarily a **personal learning and portfolio project**, but suggestions and improvements are welcome.
+
+Feel free to open issues or submit pull requests.
+
+---
+
+# 📄 License
+
 MIT License.

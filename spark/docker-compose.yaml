@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  spark:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spark
+    environment:
+      - SPARK_MODE=client
+    volumes:
+      - ../ETL:/opt/app/ETL
+      - ../data:/opt/app/data
+      - ./spark_jobs:/opt/app/spark_jobs
+    working_dir: /opt/app
+    command: ["sleep", "infinity"]

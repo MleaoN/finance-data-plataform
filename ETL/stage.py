@@ -1,5 +1,9 @@
 import pandas as pd
-from ETL.etl_utils import engine, log_step
+from pathlib import Path
+from ETL.etl_utils import engine, log_step, write_parquet
+
+
+
 
 # ---------------------------------------------------------
 # Stage macro data
@@ -22,6 +26,7 @@ def stage_macro_timeseries():
 
     df = pd.read_sql(query, engine)
 
+    # Write to Postgres (existing behavior)
     df.to_sql(
         "stage_macro_timeseries",
         engine,
@@ -29,7 +34,11 @@ def stage_macro_timeseries():
         index=False
     )
 
+    # NEW: Write to Parquet for Spark
+    write_parquet(df, "stage/macro.parquet")
+
     log_step(f"Inserted {len(df)} staged macro records.")
+
 
 # ---------------------------------------------------------
 # Stage market data
@@ -55,6 +64,7 @@ def stage_market_daily():
 
     df = pd.read_sql(query, engine)
 
+    # Write to Postgres (existing behavior)
     df.to_sql(
         "stage_market_daily",
         engine,
@@ -62,7 +72,11 @@ def stage_market_daily():
         index=False
     )
 
+    # NEW: Write to Parquet for Spark
+    write_parquet(df, "stage/market.parquet")
+
     log_step(f"Inserted {len(df)} staged market records.")
+
 
 # ---------------------------------------------------------
 # Airflow entrypoint

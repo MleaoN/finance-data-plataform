@@ -32,4 +32,10 @@ with DAG(
         trigger_dag_id="staging_etl_pipeline",
     )
 
-    trigger_macro >> trigger_market >> trigger_staging
+    trigger_schema = TriggerDagRunOperator(
+    task_id="trigger_schema_init",
+    trigger_dag_id="init_schema",
+)
+
+
+    trigger_schema >> trigger_macro >> trigger_market >> trigger_staging

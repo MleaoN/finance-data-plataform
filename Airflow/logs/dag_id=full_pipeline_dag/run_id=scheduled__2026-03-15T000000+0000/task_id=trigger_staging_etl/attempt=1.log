@@ -1,0 +1,34 @@
+[2026-03-16T08:58:59.955+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-16T08:58:59.991+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: full_pipeline_dag.trigger_staging_etl scheduled__2026-03-15T00:00:00+00:00 [queued]>
+[2026-03-16T08:59:00.000+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: full_pipeline_dag.trigger_staging_etl scheduled__2026-03-15T00:00:00+00:00 [queued]>
+[2026-03-16T08:59:00.001+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2026-03-16T08:59:00.017+0000] {taskinstance.py:2327} INFO - Executing <Task(TriggerDagRunOperator): trigger_staging_etl> on 2026-03-15 00:00:00+00:00
+[2026-03-16T08:59:00.030+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'full_pipeline_dag', 'trigger_staging_etl', 'scheduled__2026-03-15T00:00:00+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/full_pipeline_dag.py', '--cfg-path', '/tmp/tmpe9m5t8oe']
+[2026-03-16T08:59:00.032+0000] {standard_task_runner.py:91} INFO - Job 13: Subtask trigger_staging_etl
+[2026-03-16T08:59:00.034+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=4847) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-16T08:59:00.035+0000] {standard_task_runner.py:63} INFO - Started process 4848 to run task
+[2026-03-16T08:59:00.118+0000] {task_command.py:426} INFO - Running <TaskInstance: full_pipeline_dag.trigger_staging_etl scheduled__2026-03-15T00:00:00+00:00 [running]> on host 0f85920d49ee
+[2026-03-16T08:59:00.218+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='marcelo' AIRFLOW_CTX_DAG_ID='full_pipeline_dag' AIRFLOW_CTX_TASK_ID='trigger_staging_etl' AIRFLOW_CTX_EXECUTION_DATE='2026-03-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-15T00:00:00+00:00'
+[2026-03-16T08:59:00.219+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-16T08:59:00.344+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-16T08:59:00.356+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=full_pipeline_dag, task_id=trigger_staging_etl, execution_date=20260315T000000, start_date=20260316T085859, end_date=20260316T085900
+[2026-03-16T08:59:00.410+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-16T08:59:00.433+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T08:59:00.436+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-03-16T18:23:35.405+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-16T18:23:35.490+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: full_pipeline_dag.trigger_staging_etl scheduled__2026-03-15T00:00:00+00:00 [queued]>
+[2026-03-16T18:23:35.515+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: full_pipeline_dag.trigger_staging_etl scheduled__2026-03-15T00:00:00+00:00 [queued]>
+[2026-03-16T18:23:35.516+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2026-03-16T18:23:35.548+0000] {taskinstance.py:2327} INFO - Executing <Task(TriggerDagRunOperator): trigger_staging_etl> on 2026-03-15 00:00:00+00:00
+[2026-03-16T18:23:35.569+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=4263) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-16T18:23:35.565+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'full_pipeline_dag', 'trigger_staging_etl', 'scheduled__2026-03-15T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/full_pipeline_dag.py', '--cfg-path', '/tmp/tmprd1zxu4t']
+[2026-03-16T18:23:35.576+0000] {standard_task_runner.py:63} INFO - Started process 4264 to run task
+[2026-03-16T18:23:35.580+0000] {standard_task_runner.py:91} INFO - Job 9: Subtask trigger_staging_etl
+[2026-03-16T18:23:35.749+0000] {task_command.py:426} INFO - Running <TaskInstance: full_pipeline_dag.trigger_staging_etl scheduled__2026-03-15T00:00:00+00:00 [running]> on host d7fb33a145f1
+[2026-03-16T18:23:35.968+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='marcelo' AIRFLOW_CTX_DAG_ID='full_pipeline_dag' AIRFLOW_CTX_TASK_ID='trigger_staging_etl' AIRFLOW_CTX_EXECUTION_DATE='2026-03-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-15T00:00:00+00:00'
+[2026-03-16T18:23:35.969+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-16T18:23:36.201+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-16T18:23:36.222+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=full_pipeline_dag, task_id=trigger_staging_etl, execution_date=20260315T000000, start_date=20260316T182335, end_date=20260316T182336
+[2026-03-16T18:23:36.284+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-16T18:23:36.312+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T18:23:36.317+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

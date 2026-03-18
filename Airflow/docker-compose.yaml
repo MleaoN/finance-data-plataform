@@ -19,7 +19,6 @@ services:
   airflow-init:
     build:
       context: ./airflow
-    image: custom-airflow:2.9.0
     container_name: airflow-init
     entrypoint: /bin/bash
     command: -c "
@@ -35,6 +34,7 @@ services:
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-postgres/airflow
+      PYTHONPATH: /opt/airflow
     depends_on:
       airflow-postgres:
         condition: service_healthy
@@ -42,30 +42,10 @@ services:
   airflow-webserver:
     build:
       context: ./airflow
-    image: custom-airflow:2.9.0
     container_name: airflow-webserver
-    command: webserver
+    command: ["airflow", "webserver"]
     ports:
       - "8080:8080"
-    environment:
-      AIRFLOW__CORE__EXECUTOR: LocalExecutor
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-postgres/airflow
-      PYTHONPATH: /opt/airflow
-    volumes:
-      - ./dags:/opt/airflow/dags
-      - ../ETL:/opt/airflow/ETL
-    depends_on:
-      airflow-postgres:
-        condition: service_healthy
-      airflow-init:
-        condition: service_completed_successfully
-
-  airflow-scheduler:
-    build:
-      context: ./airflow
-    image: custom-airflow:2.9.0
-    container_name: airflow-scheduler
-    command: scheduler
     env_file:
       - ../.env
     environment:
@@ -75,11 +55,37 @@ services:
     volumes:
       - ./dags:/opt/airflow/dags
       - ../ETL:/opt/airflow/ETL
+      - ../data:/opt/airflow/data
+      - ./logs:/opt/airflow/logs
+      - ./sql:/opt/airflow/sql 
     depends_on:
       airflow-postgres:
         condition: service_healthy
       airflow-init:
         condition: service_completed_successfully
 
+  airflow-scheduler:
+    build:
+      context: ./airflow
+    container_name: airflow-scheduler
+    command: ["airflow", "scheduler"]
+    env_file:
+      - .env_Airflow
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-postgres/airflow
+      PYTHONPATH: /opt/airflow
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ../ETL:/opt/airflow/ETL
+      - ../data:/opt/airflow/data
+      - ./logs:/opt/airflow/logs
+      - ./sql:/opt/airflow/sql 
+    depends_on:
+      airflow-postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+        
 volumes:
   postgres_data:

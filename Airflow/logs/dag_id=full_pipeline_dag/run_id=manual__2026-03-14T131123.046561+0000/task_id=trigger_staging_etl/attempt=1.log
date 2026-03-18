@@ -1,0 +1,17 @@
+[2026-03-14T13:11:44.844+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-14T13:11:44.879+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: full_pipeline_dag.trigger_staging_etl manual__2026-03-14T13:11:23.046561+00:00 [queued]>
+[2026-03-14T13:11:44.888+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: full_pipeline_dag.trigger_staging_etl manual__2026-03-14T13:11:23.046561+00:00 [queued]>
+[2026-03-14T13:11:44.889+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2026-03-14T13:11:44.905+0000] {taskinstance.py:2327} INFO - Executing <Task(TriggerDagRunOperator): trigger_staging_etl> on 2026-03-14 13:11:23.046561+00:00
+[2026-03-14T13:11:44.920+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'full_pipeline_dag', 'trigger_staging_etl', 'manual__2026-03-14T13:11:23.046561+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/full_pipeline_dag.py', '--cfg-path', '/tmp/tmpwnz9hkz4']
+[2026-03-14T13:11:44.924+0000] {standard_task_runner.py:91} INFO - Job 6: Subtask trigger_staging_etl
+[2026-03-14T13:11:44.924+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=269) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-14T13:11:44.927+0000] {standard_task_runner.py:63} INFO - Started process 271 to run task
+[2026-03-14T13:11:45.006+0000] {task_command.py:426} INFO - Running <TaskInstance: full_pipeline_dag.trigger_staging_etl manual__2026-03-14T13:11:23.046561+00:00 [running]> on host 0f85920d49ee
+[2026-03-14T13:11:45.105+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='marcelo' AIRFLOW_CTX_DAG_ID='full_pipeline_dag' AIRFLOW_CTX_TASK_ID='trigger_staging_etl' AIRFLOW_CTX_EXECUTION_DATE='2026-03-14T13:11:23.046561+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-14T13:11:23.046561+00:00'
+[2026-03-14T13:11:45.106+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-14T13:11:45.242+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-14T13:11:45.271+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=full_pipeline_dag, task_id=trigger_staging_etl, execution_date=20260314T131123, start_date=20260314T131144, end_date=20260314T131145
+[2026-03-14T13:11:45.304+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-03-14T13:11:45.325+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-14T13:11:45.328+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

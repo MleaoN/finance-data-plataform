@@ -3,6 +3,7 @@ import json
 import pandas as pd
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
+from pathlib import Path
 
 # ---------------------------------------------------------
 # Load environment variables
@@ -14,6 +15,12 @@ if not DB_URL:
     raise ValueError("Environment variable DB_URL is missing. Add it to your .env file.")
 
 engine = create_engine(DB_URL)
+
+
+# ---------------------------------------------------------
+# Data lake root
+# ---------------------------------------------------------
+DATA_ROOT = Path("/opt/airflow/data")
 
 # ---------------------------------------------------------
 # Shared constants
@@ -58,6 +65,15 @@ YIELD_TICKERS = {
 # ---------------------------------------------------------
 # Shared helpers
 # ---------------------------------------------------------
+# ---------------------------------------------------------
+# Helper: Write Parquet
+# ---------------------------------------------------------
+
+def write_parquet(df: pd.DataFrame, relative_path: str):
+    output_path = DATA_ROOT / relative_path
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    df.to_parquet(output_path, index=False)
+    log_step(f"Parquet written: {output_path}")
 
 def clean_json_value(x):
     return None if pd.isna(x) else x

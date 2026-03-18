@@ -1,0 +1,24 @@
+# Ignore Airflow logs
+Airflow/logs
+Airflow/logs/*
+**/logs/*
+*.log
+
+# Ignore Python cache
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Ignore venvs
+venv/
+.env/
+.envrc
+
+# Ignore data dumps
+data/
+*.csv
+*.parquet
+
+# Ignore devcontainer artifacts
+.devcontainer/
+.vscode/

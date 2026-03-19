@@ -53,41 +53,61 @@ This ensures **reproducible, dependency-aware execution** of the entire pipeline
 
 # 📂 Project Structure
 
-```
+```# 📂 Project Structure
+
 FINANCE_DATA_PLATFORM/
 │
-├── Airflow/
-│   │
-│   ├── airflow/                     # Custom Airflow image
-│   │   ├── Dockerfile
-│   │   └── requirements.txt
-│   │
-│   ├── dags/                        # Airflow DAG definitions
+├── airflow/                      # Airflow orchestration layer
+│   ├── dags/                     # DAG definitions
 │   │   ├── full_pipeline_dag.py
 │   │   ├── macro_etl_dag.py
 │   │   ├── market_etl_dag.py
 │   │   └── staging_etl_dag.py
 │   │
-│   ├── docker-compose.yml           # Airflow services (webserver, scheduler, postgres)
-│   └── .env                         # Airflow environment variables (not committed)
+│   ├── plugins/                  # (optional) custom operators/hooks
+│   │
+│   ├── .env_Spark                # Airflow enviroment setup│(ignored)
+│   ├── Dockerfile                # Custom Airflow image
+│   ├── requirements.txt
+│   └── docker-compose.yaml       # Airflow stack (webserver, scheduler, db)
 │
-├── ETL/                             # Core ETL modules used by Airflow
+├── etl/                          # Python ETL ingestion layer
 │   ├── __init__.py
-│   ├── macro.py                     # World Bank macroeconomic ingestion
-│   ├── stocks.py                    # Market data ingestion
-│   ├── stage.py                     # Staging & normalization logic
-│   └── etl_utils.py                 # Shared helpers (DB connection, logging, validation)
+│   ├── macro.py                  # World Bank ingestion
+│   ├── stocks.py                 # Market data ingestion
+│   ├── stage.py                  # Data normalization
+│   ├── init_db.py                # DB schema initialization
+│   ├── db_utils.py               # DB helpers
+│   └── etl_utils.py              # Shared utilities
 │
-├── db/
-│   └── schema.sql                   # Database schema definitions
+├── spark/                        # Spark processing layer
+│   ├── config/
+│   │   └── config.py             # Spark configs / constants
+│   │
+│   ├── jobs/                     # Transformation jobs (rename from spark_jobs)
+│   │   ├── transform_macro.py
+│   │   ├── transform_market.py
+│   │   └── test_spark.py
+│   │
+│   ├── run_job.py                # Entry point for Spark jobs
+│   ├── Dockerfile                # Spark container image
+│   ├── docker-compose.yaml       # Spark service definition
+│   └── .env.spark
 │
-├── .devcontainer/                   # VS Code Dev Container configuration
-│   ├── devcontainer.json
-│   └── Dockerfile
+├── data/                         # Data lake
+│   ├── raw/                      # Immutable source data
+│   ├── stage/                    # Cleaned / normalized
+│   ├── curated/                  # Business-ready datasets
+│   └── normalized/               # (optional) intermediate layer
 │
-├── .env.example                     # Environment variable template
+├── app/                          # (optional future layer)
+│   └── app.py                    # Dashboard / API entrypoint
+│
+├── .env                          # Global environment variables (ignored)
+├── .env.example
 ├── .gitignore
-├── requirements.txt                 # Local development dependencies
+├── docker-compose.yaml           # (optional) unified orchestration
+├── requirements.txt
 └── README.md
 ```
 

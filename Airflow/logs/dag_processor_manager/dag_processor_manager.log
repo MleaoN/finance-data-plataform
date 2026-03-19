@@ -21186,3 +21186,1696 @@ File Path                               PID    Runtime      # DAGs    # Errors  
 ================================================================================
 [2026-03-19T15:55:46.691+0000] {manager.py:452} INFO - Exiting gracefully upon receiving signal 15
 [2026-03-19T15:55:46.692+0000] {manager.py:452} INFO - Exiting gracefully upon receiving signal 15
+[2026-03-19T15:56:34.755+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2026-03-19T15:56:34.758+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2026-03-19T15:56:34.760+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-03-19T15:56:34.762+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-19T15:56:34.872+0000] {manager.py:740} INFO - There are 6 files in /opt/airflow/dags
+[2026-03-19T15:56:36.507+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/full_pipeline_dag.py    171  0.36s             0           0
+/opt/airflow/dags/init_schema_dag.py                             0           0
+/opt/airflow/dags/macro_etl_dag.py                               0           0
+/opt/airflow/dags/market_etl_dag.py                              0           0
+/opt/airflow/dags/spark_jobs_dag.py       168  0.53s             0           0
+/opt/airflow/dags/staging_etl_dag.py                             0           0
+================================================================================
+[2026-03-19T15:57:07.129+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  6.32s           2026-03-19T15:56:44
+/opt/airflow/dags/staging_etl_dag.py                             1           0  4.25s           2026-03-19T15:56:41
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.87s           2026-03-19T15:56:43
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  1.40s           2026-03-19T15:56:37
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  1.33s           2026-03-19T15:56:37
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T15:56:37
+================================================================================
+[2026-03-19T15:57:37.487+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  2.72s           2026-03-19T15:57:14
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.52s           2026-03-19T15:57:15
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.34s           2026-03-19T15:57:16
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.67s           2026-03-19T15:57:08
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.64s           2026-03-19T15:57:08
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.24s           2026-03-19T15:57:09
+================================================================================
+[2026-03-19T15:58:07.674+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.30s           2026-03-19T15:57:46
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.19s           2026-03-19T15:57:47
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.04s           2026-03-19T15:57:46
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.24s           2026-03-19T15:57:39
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.24s           2026-03-19T15:57:39
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.17s           2026-03-19T15:57:39
+================================================================================
+[2026-03-19T15:58:37.333+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.48s           2026-03-19T15:58:17
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.47s           2026-03-19T15:58:19
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.25s           2026-03-19T15:58:18
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.23s           2026-03-19T15:58:10
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.22s           2026-03-19T15:58:10
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.20s           2026-03-19T15:58:10
+================================================================================
+[2026-03-19T15:59:08.201+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.62s           2026-03-19T15:58:49
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.17s           2026-03-19T15:58:50
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.03s           2026-03-19T15:58:50
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.23s           2026-03-19T15:58:40
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.21s           2026-03-19T15:58:40
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.16s           2026-03-19T15:58:41
+================================================================================
+[2026-03-19T15:59:38.531+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  9.44s           2026-03-19T15:59:29
+/opt/airflow/dags/macro_etl_dag.py                               1           0  7.69s           2026-03-19T15:59:30
+/opt/airflow/dags/market_etl_dag.py                              1           0  2.13s           2026-03-19T15:59:31
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.20s           2026-03-19T15:59:11
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.19s           2026-03-19T15:59:11
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.19s           2026-03-19T15:59:11
+================================================================================
+[2026-03-19T16:00:09.127+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.25s           2026-03-19T16:00:03
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.13s           2026-03-19T16:00:01
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.90s           2026-03-19T16:00:01
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.20s           2026-03-19T15:59:41
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.19s           2026-03-19T15:59:41
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.18s           2026-03-19T15:59:41
+================================================================================
+[2026-03-19T16:00:39.899+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.02s           2026-03-19T16:00:34
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.75s           2026-03-19T16:00:33
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.71s           2026-03-19T16:00:32
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.20s           2026-03-19T16:00:12
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.20s           2026-03-19T16:00:12
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.19s           2026-03-19T16:00:12
+================================================================================
+[2026-03-19T16:01:09.985+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  0.99s           2026-03-19T16:01:05
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.73s           2026-03-19T16:01:03
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.71s           2026-03-19T16:01:03
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.24s           2026-03-19T16:00:43
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.24s           2026-03-19T16:00:43
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.18s           2026-03-19T16:00:43
+================================================================================
+[2026-03-19T16:01:35.202+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-19T16:01:35.343+0000] {manager.py:740} INFO - There are 6 files in /opt/airflow/dags
+[2026-03-19T16:01:40.620+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  2.16s           2026-03-19T16:01:35
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.32s           2026-03-19T16:01:35
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.32s           2026-03-19T16:01:37
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.18s           2026-03-19T16:01:13
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.16s           2026-03-19T16:01:13
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.15s           2026-03-19T16:01:14
+================================================================================
+[2026-03-19T16:02:11.263+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py      513  5.11s             1           0  2.16s           2026-03-19T16:01:35
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  2.10s           2026-03-19T16:01:46
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  1.94s           2026-03-19T16:01:46
+/opt/airflow/dags/macro_etl_dag.py        516  5.05s             1           0  1.32s           2026-03-19T16:01:35
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.32s           2026-03-19T16:01:37
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:01:47
+================================================================================
+[2026-03-19T16:02:41.620+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  10.53s          2026-03-19T16:02:16
+/opt/airflow/dags/macro_etl_dag.py                               1           0  10.43s          2026-03-19T16:02:16
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.72s           2026-03-19T16:02:18
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.21s           2026-03-19T16:02:17
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.20s           2026-03-19T16:02:18
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.17s           2026-03-19T16:02:17
+================================================================================
+[2026-03-19T16:03:12.115+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.60s           2026-03-19T16:02:48
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.58s           2026-03-19T16:02:48
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.34s           2026-03-19T16:02:50
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.27s           2026-03-19T16:02:48
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:02:48
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.17s           2026-03-19T16:02:48
+================================================================================
+[2026-03-19T16:03:42.777+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.51s           2026-03-19T16:03:20
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.29s           2026-03-19T16:03:20
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.17s           2026-03-19T16:03:21
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.38s           2026-03-19T16:03:18
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.20s           2026-03-19T16:03:20
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.20s           2026-03-19T16:03:20
+================================================================================
+[2026-03-19T16:04:13.315+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  2.99s           2026-03-19T16:03:53
+/opt/airflow/dags/macro_etl_dag.py                               1           0  2.48s           2026-03-19T16:03:54
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.36s           2026-03-19T16:03:55
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.58s           2026-03-19T16:03:50
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.24s           2026-03-19T16:03:50
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.23s           2026-03-19T16:03:50
+================================================================================
+[2026-03-19T16:04:43.324+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  5.63s           2026-03-19T16:04:26
+/opt/airflow/dags/market_etl_dag.py                              1           0  4.86s           2026-03-19T16:04:31
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  4.16s           2026-03-19T16:04:24
+/opt/airflow/dags/init_schema_dag.py                             1           0  3.35s           2026-03-19T16:04:28
+/opt/airflow/dags/staging_etl_dag.py                             1           0  2.40s           2026-03-19T16:04:30
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.20s           2026-03-19T16:04:32
+================================================================================
+[2026-03-19T16:05:13.608+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init_schema_dag.py                             1           0  9.04s           2026-03-19T16:05:07
+/opt/airflow/dags/market_etl_dag.py       696  5.52s             1           0  4.86s           2026-03-19T16:04:31
+/opt/airflow/dags/staging_etl_dag.py      691  11.97s            1           0  2.40s           2026-03-19T16:04:30
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  1.23s           2026-03-19T16:04:56
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.20s           2026-03-19T16:04:32
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.35s           2026-03-19T16:04:57
+================================================================================
+[2026-03-19T16:05:43.673+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  22.82s          2026-03-19T16:05:24
+/opt/airflow/dags/market_etl_dag.py                              1           0  17.91s          2026-03-19T16:05:25
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.67s           2026-03-19T16:05:26
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.27s           2026-03-19T16:05:28
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.25s           2026-03-19T16:05:27
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.21s           2026-03-19T16:05:38
+================================================================================
+[2026-03-19T16:06:14.109+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  14.59s          2026-03-19T16:06:11
+/opt/airflow/dags/macro_etl_dag.py                               1           0  11.28s          2026-03-19T16:06:10
+/opt/airflow/dags/staging_etl_dag.py                             1           0  4.51s           2026-03-19T16:05:59
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.22s           2026-03-19T16:06:11
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:06:11
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.18s           2026-03-19T16:06:10
+================================================================================
+[2026-03-19T16:06:35.821+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-19T16:06:35.981+0000] {manager.py:740} INFO - There are 6 files in /opt/airflow/dags
+[2026-03-19T16:06:43.921+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py       784  0.85s             1           0  14.59s          2026-03-19T16:06:11
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.89s           2026-03-19T16:06:43
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  1.25s           2026-03-19T16:06:42
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.01s           2026-03-19T16:06:30
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.38s           2026-03-19T16:06:42
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.19s           2026-03-19T16:06:43
+================================================================================
+[2026-03-19T16:07:14.870+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py       819  0.01s             1           0  1.45s           2026-03-19T16:06:44
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.88s           2026-03-19T16:07:01
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.82s           2026-03-19T16:07:14
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.21s           2026-03-19T16:07:14
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.20s           2026-03-19T16:07:12
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.20s           2026-03-19T16:07:13
+================================================================================
+[2026-03-19T16:07:45.533+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  2.68s           2026-03-19T16:07:34
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.25s           2026-03-19T16:07:16
+/opt/airflow/dags/macro_etl_dag.py        858  0.03s             1           0  0.82s           2026-03-19T16:07:14
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.63s           2026-03-19T16:07:44
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.62s           2026-03-19T16:07:44
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.29s           2026-03-19T16:07:43
+================================================================================
+[2026-03-19T16:08:21.133+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  10.21s          2026-03-19T16:07:56
+/opt/airflow/dags/macro_etl_dag.py                               1           0  9.29s           2026-03-19T16:07:54
+/opt/airflow/dags/staging_etl_dag.py      870  14.99s            1           0  2.68s           2026-03-19T16:07:34
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.63s           2026-03-19T16:07:44
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.62s           2026-03-19T16:07:44
+/opt/airflow/dags/spark_jobs_dag.py       873  0.15s             1           0  0.29s           2026-03-19T16:07:43
+================================================================================
+[2026-03-19T16:08:51.244+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  44.75s          2026-03-19T16:08:50
+/opt/airflow/dags/market_etl_dag.py       889  10.31s            1           0  10.21s          2026-03-19T16:07:56
+/opt/airflow/dags/init_schema_dag.py                             1           0  10.11s          2026-03-19T16:08:40
+/opt/airflow/dags/macro_etl_dag.py        895  0.48s             1           0  9.29s           2026-03-19T16:07:54
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  4.95s           2026-03-19T16:08:30
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  4.88s           2026-03-19T16:08:25
+================================================================================
+[2026-03-19T16:09:21.904+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py      918  0.90s             1           0  44.75s          2026-03-19T16:08:50
+/opt/airflow/dags/market_etl_dag.py       922  0.05s             1           0  10.55s          2026-03-19T16:08:51
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.88s           2026-03-19T16:08:52
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  1.06s           2026-03-19T16:08:57
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.30s           2026-03-19T16:09:11
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.21s           2026-03-19T16:09:01
+================================================================================
+[2026-03-19T16:09:52.235+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init_schema_dag.py                             1           0  6.89s           2026-03-19T16:09:49
+/opt/airflow/dags/market_etl_dag.py                              1           0  3.68s           2026-03-19T16:09:25
+/opt/airflow/dags/staging_etl_dag.py                             1           0  3.29s           2026-03-19T16:09:24
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.37s           2026-03-19T16:09:25
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.22s           2026-03-19T16:09:31
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.20s           2026-03-19T16:09:27
+================================================================================
+[2026-03-19T16:10:22.782+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  15.12s          2026-03-19T16:10:10
+/opt/airflow/dags/market_etl_dag.py                              1           0  13.62s          2026-03-19T16:10:11
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.15s           2026-03-19T16:10:11
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.49s           2026-03-19T16:10:20
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.24s           2026-03-19T16:10:11
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.22s           2026-03-19T16:10:11
+================================================================================
+[2026-03-19T16:10:53.535+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  2.80s           2026-03-19T16:10:43
+/opt/airflow/dags/market_etl_dag.py                              1           0  2.57s           2026-03-19T16:10:45
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.62s           2026-03-19T16:10:45
+/opt/airflow/dags/init_schema_dag.py     1012  1.86s             1           0  0.49s           2026-03-19T16:10:20
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.40s           2026-03-19T16:10:42
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.30s           2026-03-19T16:10:42
+================================================================================
+[2026-03-19T16:11:23.620+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/init_schema_dag.py                             1           0  4.80s           2026-03-19T16:10:56
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.34s           2026-03-19T16:11:16
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.32s           2026-03-19T16:11:15
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.91s           2026-03-19T16:11:16
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.19s           2026-03-19T16:11:13
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.18s           2026-03-19T16:11:13
+================================================================================
+[2026-03-19T16:11:35.920+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-19T16:11:36.046+0000] {manager.py:740} INFO - There are 6 files in /opt/airflow/dags
+[2026-03-19T16:11:54.516+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  2.84s           2026-03-19T16:11:48
+/opt/airflow/dags/market_etl_dag.py                              1           0  2.56s           2026-03-19T16:11:49
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.82s           2026-03-19T16:11:49
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.57s           2026-03-19T16:11:44
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.56s           2026-03-19T16:11:44
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.28s           2026-03-19T16:11:26
+================================================================================
+[2026-03-19T16:12:25.250+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.17s           2026-03-19T16:12:21
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.94s           2026-03-19T16:12:20
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.78s           2026-03-19T16:12:20
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:11:57
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.20s           2026-03-19T16:12:15
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.17s           2026-03-19T16:12:15
+================================================================================
+[2026-03-19T16:12:55.598+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  4.60s           2026-03-19T16:12:55
+/opt/airflow/dags/market_etl_dag.py      1138  0.01s             1           0  1.17s           2026-03-19T16:12:21
+/opt/airflow/dags/macro_etl_dag.py       1129  4.60s             1           0  0.78s           2026-03-19T16:12:20
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.38s           2026-03-19T16:12:28
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.23s           2026-03-19T16:12:45
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.21s           2026-03-19T16:12:45
+================================================================================
+[2026-03-19T16:13:26.485+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/macro_etl_dag.py       1162  0.01s             1           0  4.60s           2026-03-19T16:12:55
+/opt/airflow/dags/staging_etl_dag.py     1159  0.04s             1           0  4.60s           2026-03-19T16:12:55
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.14s           2026-03-19T16:12:56
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.22s           2026-03-19T16:13:16
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.21s           2026-03-19T16:13:16
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.17s           2026-03-19T16:12:58
+================================================================================
+[2026-03-19T16:13:57.105+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.15s           2026-03-19T16:13:28
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.84s           2026-03-19T16:13:27
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.80s           2026-03-19T16:13:27
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.25s           2026-03-19T16:13:47
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.21s           2026-03-19T16:13:29
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.20s           2026-03-19T16:13:46
+================================================================================
+[2026-03-19T16:14:27.890+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  8.19s           2026-03-19T16:14:06
+/opt/airflow/dags/macro_etl_dag.py                               1           0  7.97s           2026-03-19T16:14:06
+/opt/airflow/dags/market_etl_dag.py                              1           0  2.17s           2026-03-19T16:14:08
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.25s           2026-03-19T16:14:17
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.25s           2026-03-19T16:14:17
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:14:06
+================================================================================
+[2026-03-19T16:14:58.560+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.90s           2026-03-19T16:14:38
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.55s           2026-03-19T16:14:39
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.19s           2026-03-19T16:14:40
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.41s           2026-03-19T16:14:37
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.23s           2026-03-19T16:14:48
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.22s           2026-03-19T16:14:48
+================================================================================
+[2026-03-19T16:15:29.079+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.39s           2026-03-19T16:15:10
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.35s           2026-03-19T16:15:10
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.10s           2026-03-19T16:15:11
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.36s           2026-03-19T16:15:08
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.25s           2026-03-19T16:15:18
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.24s           2026-03-19T16:15:18
+================================================================================
+[2026-03-19T16:15:59.579+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.14s           2026-03-19T16:15:43
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.87s           2026-03-19T16:15:41
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.76s           2026-03-19T16:15:42
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.25s           2026-03-19T16:15:38
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.21s           2026-03-19T16:15:49
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.20s           2026-03-19T16:15:49
+================================================================================
+[2026-03-19T16:16:29.186+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.40s           2026-03-19T16:16:15
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.23s           2026-03-19T16:16:14
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.04s           2026-03-19T16:16:12
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.82s           2026-03-19T16:16:21
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.30s           2026-03-19T16:16:09
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.21s           2026-03-19T16:16:10
+================================================================================
+[2026-03-19T16:16:36.467+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-19T16:16:36.624+0000] {manager.py:740} INFO - There are 6 files in /opt/airflow/dags
+[2026-03-19T16:16:59.441+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.48s           2026-03-19T16:16:44
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.30s           2026-03-19T16:16:46
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.97s           2026-03-19T16:16:45
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.31s           2026-03-19T16:16:55
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.30s           2026-03-19T16:16:40
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.23s           2026-03-19T16:16:41
+================================================================================
+[2026-03-19T16:17:29.528+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  4.15s           2026-03-19T16:17:15
+/opt/airflow/dags/staging_etl_dag.py                             1           0  2.72s           2026-03-19T16:17:18
+/opt/airflow/dags/init_schema_dag.py                             1           0  2.63s           2026-03-19T16:17:13
+/opt/airflow/dags/macro_etl_dag.py                               1           0  2.54s           2026-03-19T16:17:18
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.16s           2026-03-19T16:17:19
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.18s           2026-03-19T16:17:26
+================================================================================
+[2026-03-19T16:17:59.566+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.68s           2026-03-19T16:17:51
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.74s           2026-03-19T16:17:48
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.72s           2026-03-19T16:17:49
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.22s           2026-03-19T16:17:57
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.20s           2026-03-19T16:17:43
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.18s           2026-03-19T16:17:46
+================================================================================
+[2026-03-19T16:18:29.994+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  8.18s           2026-03-19T16:18:27
+/opt/airflow/dags/macro_etl_dag.py                               1           0  7.79s           2026-03-19T16:18:27
+/opt/airflow/dags/market_etl_dag.py                              1           0  2.66s           2026-03-19T16:18:29
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.67s           2026-03-19T16:18:17
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.35s           2026-03-19T16:18:15
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.26s           2026-03-19T16:18:28
+================================================================================
+[2026-03-19T16:19:00.244+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py     1520  2.53s             1           0  8.18s           2026-03-19T16:18:27
+/opt/airflow/dags/macro_etl_dag.py       1529  1.02s             1           0  7.79s           2026-03-19T16:18:27
+/opt/airflow/dags/market_etl_dag.py                              1           0  2.66s           2026-03-19T16:18:29
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.46s           2026-03-19T16:18:59
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.26s           2026-03-19T16:18:45
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.18s           2026-03-19T16:18:47
+================================================================================
+[2026-03-19T16:19:31.231+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py     1558  0.04s             1           0  3.26s           2026-03-19T16:19:00
+/opt/airflow/dags/macro_etl_dag.py       1561  0.01s             1           0  1.78s           2026-03-19T16:19:00
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.32s           2026-03-19T16:19:02
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.23s           2026-03-19T16:19:30
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.22s           2026-03-19T16:19:18
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.21s           2026-03-19T16:19:15
+================================================================================
+[2026-03-19T16:20:01.685+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/macro_etl_dag.py                               1           0  2.55s           2026-03-19T16:19:33
+/opt/airflow/dags/staging_etl_dag.py                             1           0  2.55s           2026-03-19T16:19:33
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.35s           2026-03-19T16:19:35
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.36s           2026-03-19T16:19:46
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.23s           2026-03-19T16:19:48
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.20s           2026-03-19T16:20:00
+================================================================================
+[2026-03-19T16:20:32.442+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.27s           2026-03-19T16:20:06
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.22s           2026-03-19T16:20:04
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.80s           2026-03-19T16:20:05
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.36s           2026-03-19T16:20:31
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.27s           2026-03-19T16:20:16
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.23s           2026-03-19T16:20:19
+================================================================================
+[2026-03-19T16:20:58.960+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.57s           2026-03-19T16:20:38
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.50s           2026-03-19T16:20:37
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.34s           2026-03-19T16:20:36
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.36s           2026-03-19T16:20:31
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.28s           2026-03-19T16:20:49
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.25s           2026-03-19T16:20:47
+================================================================================
+[2026-03-19T16:21:33.435+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  2.11s           2026-03-19T16:21:09
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.94s           2026-03-19T16:21:09
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.40s           2026-03-19T16:21:10
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.26s           2026-03-19T16:21:32
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.25s           2026-03-19T16:21:18
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.25s           2026-03-19T16:21:20
+================================================================================
+[2026-03-19T16:21:36.471+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-19T16:21:36.619+0000] {manager.py:740} INFO - There are 6 files in /opt/airflow/dags
+[2026-03-19T16:22:04.325+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.09s           2026-03-19T16:21:41
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.98s           2026-03-19T16:21:40
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.97s           2026-03-19T16:21:40
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.88s           2026-03-19T16:21:49
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.37s           2026-03-19T16:22:03
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.22s           2026-03-19T16:21:51
+================================================================================
+[2026-03-19T16:22:34.361+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.06s           2026-03-19T16:22:13
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.01s           2026-03-19T16:22:12
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.99s           2026-03-19T16:22:12
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.31s           2026-03-19T16:22:20
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.27s           2026-03-19T16:22:21
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.20s           2026-03-19T16:22:34
+================================================================================
+[2026-03-19T16:23:05.129+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  10.08s          2026-03-19T16:22:59
+/opt/airflow/dags/macro_etl_dag.py                               1           0  7.38s           2026-03-19T16:22:49
+/opt/airflow/dags/staging_etl_dag.py                             1           0  7.33s           2026-03-19T16:22:49
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.70s           2026-03-19T16:22:52
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.39s           2026-03-19T16:22:52
+/opt/airflow/dags/full_pipeline_dag.py   1796  0.02s             1           0  0.20s           2026-03-19T16:22:34
+================================================================================
+[2026-03-19T16:23:35.944+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  10.08s          2026-03-19T16:22:59
+/opt/airflow/dags/macro_etl_dag.py       1804  13.89s            1           0  7.38s           2026-03-19T16:22:49
+/opt/airflow/dags/staging_etl_dag.py     1801  14.86s            1           0  7.33s           2026-03-19T16:22:49
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  1.24s           2026-03-19T16:23:06
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.70s           2026-03-19T16:22:52
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.39s           2026-03-19T16:22:52
+================================================================================
+[2026-03-19T16:24:06.394+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  19.66s          2026-03-19T16:23:40
+/opt/airflow/dags/macro_etl_dag.py                               1           0  18.70s          2026-03-19T16:23:40
+/opt/airflow/dags/market_etl_dag.py                              1           0  3.53s           2026-03-19T16:23:45
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.51s           2026-03-19T16:23:41
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.49s           2026-03-19T16:23:41
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.26s           2026-03-19T16:23:41
+================================================================================
+[2026-03-19T16:24:36.467+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  7.66s           2026-03-19T16:24:18
+/opt/airflow/dags/macro_etl_dag.py                               1           0  7.62s           2026-03-19T16:24:18
+/opt/airflow/dags/market_etl_dag.py                              1           0  3.31s           2026-03-19T16:24:23
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.39s           2026-03-19T16:24:19
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.39s           2026-03-19T16:24:19
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.21s           2026-03-19T16:24:19
+================================================================================
+[2026-03-19T16:25:06.082+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/macro_etl_dag.py                               1           0  2.96s           2026-03-19T16:24:52
+/opt/airflow/dags/staging_etl_dag.py                             1           0  2.92s           2026-03-19T16:24:52
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.24s           2026-03-19T16:24:54
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.19s           2026-03-19T16:24:52
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.17s           2026-03-19T16:24:52
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.16s           2026-03-19T16:24:52
+================================================================================
+[2026-03-19T16:25:37.230+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.25s           2026-03-19T16:25:23
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.24s           2026-03-19T16:25:23
+/opt/airflow/dags/market_etl_dag.py                              1           0  0.99s           2026-03-19T16:25:25
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.19s           2026-03-19T16:25:23
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.18s           2026-03-19T16:25:23
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.17s           2026-03-19T16:25:24
+================================================================================
+[2026-03-19T16:26:07.638+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.18s           2026-03-19T16:25:55
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.17s           2026-03-19T16:25:57
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.15s           2026-03-19T16:25:55
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.23s           2026-03-19T16:25:54
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.21s           2026-03-19T16:25:55
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.18s           2026-03-19T16:25:55
+================================================================================
+[2026-03-19T16:26:37.090+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-19T16:26:37.223+0000] {manager.py:740} INFO - There are 6 files in /opt/airflow/dags
+[2026-03-19T16:26:38.344+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.27s           2026-03-19T16:26:29
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.06s           2026-03-19T16:26:26
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.98s           2026-03-19T16:26:27
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.27s           2026-03-19T16:26:25
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:26:25
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.20s           2026-03-19T16:26:24
+================================================================================
+[2026-03-19T16:27:08.534+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  5.96s           2026-03-19T16:27:01
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.74s           2026-03-19T16:27:03
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.32s           2026-03-19T16:27:03
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.85s           2026-03-19T16:27:04
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.30s           2026-03-19T16:27:01
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:27:01
+================================================================================
+[2026-03-19T16:27:38.571+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  2.72s           2026-03-19T16:27:36
+/opt/airflow/dags/staging_etl_dag.py                             1           0  2.08s           2026-03-19T16:27:35
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.06s           2026-03-19T16:27:36
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.37s           2026-03-19T16:27:32
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.29s           2026-03-19T16:27:32
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.23s           2026-03-19T16:27:32
+================================================================================
+[2026-03-19T16:28:09.125+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.80s           2026-03-19T16:28:08
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.34s           2026-03-19T16:28:08
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.24s           2026-03-19T16:28:06
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.28s           2026-03-19T16:28:03
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.28s           2026-03-19T16:28:03
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.25s           2026-03-19T16:28:03
+================================================================================
+[2026-03-19T16:28:39.832+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py      2133  1.04s             1           0  1.80s           2026-03-19T16:28:08
+/opt/airflow/dags/macro_etl_dag.py       2136  1.02s             1           0  1.34s           2026-03-19T16:28:08
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.96s           2026-03-19T16:28:37
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.25s           2026-03-19T16:28:33
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.24s           2026-03-19T16:28:33
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.18s           2026-03-19T16:28:33
+================================================================================
+[2026-03-19T16:29:10.561+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.86s           2026-03-19T16:28:40
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.12s           2026-03-19T16:29:09
+/opt/airflow/dags/macro_etl_dag.py       2166  0.01s             1           0  1.10s           2026-03-19T16:28:39
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.28s           2026-03-19T16:29:04
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.28s           2026-03-19T16:29:04
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.26s           2026-03-19T16:29:04
+================================================================================
+[2026-03-19T16:29:40.588+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.22s           2026-03-19T16:29:12
+/opt/airflow/dags/staging_etl_dag.py     2193  0.20s             1           0  1.12s           2026-03-19T16:29:09
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.09s           2026-03-19T16:29:11
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.34s           2026-03-19T16:29:35
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.27s           2026-03-19T16:29:35
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.20s           2026-03-19T16:29:35
+================================================================================
+[2026-03-19T16:30:11.082+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.39s           2026-03-19T16:29:44
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.06s           2026-03-19T16:29:41
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.98s           2026-03-19T16:29:43
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.24s           2026-03-19T16:30:06
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.19s           2026-03-19T16:30:06
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.18s           2026-03-19T16:30:06
+================================================================================
+[2026-03-19T16:30:41.798+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.09s           2026-03-19T16:30:15
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.05s           2026-03-19T16:30:16
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.02s           2026-03-19T16:30:13
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.22s           2026-03-19T16:30:36
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.20s           2026-03-19T16:30:36
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.20s           2026-03-19T16:30:36
+================================================================================
+[2026-03-19T16:31:12.422+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.17s           2026-03-19T16:30:45
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.08s           2026-03-19T16:30:47
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.80s           2026-03-19T16:30:46
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.31s           2026-03-19T16:31:07
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.29s           2026-03-19T16:31:07
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.28s           2026-03-19T16:31:07
+================================================================================
+[2026-03-19T16:31:37.705+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-19T16:31:37.809+0000] {manager.py:740} INFO - There are 6 files in /opt/airflow/dags
+[2026-03-19T16:31:43.165+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.26s           2026-03-19T16:31:19
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.94s           2026-03-19T16:31:17
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.90s           2026-03-19T16:31:16
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.24s           2026-03-19T16:31:38
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.21s           2026-03-19T16:31:38
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.19s           2026-03-19T16:31:38
+================================================================================
+[2026-03-19T16:32:13.350+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.24s           2026-03-19T16:31:51
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.97s           2026-03-19T16:31:47
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.94s           2026-03-19T16:31:49
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.31s           2026-03-19T16:32:09
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.26s           2026-03-19T16:32:09
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.25s           2026-03-19T16:32:09
+================================================================================
+[2026-03-19T16:32:43.355+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.13s           2026-03-19T16:32:18
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.11s           2026-03-19T16:32:22
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.80s           2026-03-19T16:32:20
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.22s           2026-03-19T16:32:40
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.21s           2026-03-19T16:32:40
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.19s           2026-03-19T16:32:40
+================================================================================
+[2026-03-19T16:33:13.919+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.34s           2026-03-19T16:32:54
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.95s           2026-03-19T16:32:50
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.87s           2026-03-19T16:32:51
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.29s           2026-03-19T16:33:10
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.23s           2026-03-19T16:33:10
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:33:11
+================================================================================
+[2026-03-19T16:33:43.929+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.54s           2026-03-19T16:33:26
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.05s           2026-03-19T16:33:21
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.76s           2026-03-19T16:33:23
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.28s           2026-03-19T16:33:42
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.26s           2026-03-19T16:33:41
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.21s           2026-03-19T16:33:41
+================================================================================
+[2026-03-19T16:34:13.998+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.32s           2026-03-19T16:33:58
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.96s           2026-03-19T16:33:54
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.92s           2026-03-19T16:33:52
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:34:12
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.22s           2026-03-19T16:34:12
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.20s           2026-03-19T16:34:12
+================================================================================
+[2026-03-19T16:34:44.610+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.34s           2026-03-19T16:34:30
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.02s           2026-03-19T16:34:23
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.93s           2026-03-19T16:34:25
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.26s           2026-03-19T16:34:43
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.24s           2026-03-19T16:34:43
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.24s           2026-03-19T16:34:43
+================================================================================
+[2026-03-19T16:35:15.096+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.27s           2026-03-19T16:35:01
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.92s           2026-03-19T16:34:55
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.90s           2026-03-19T16:34:56
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.23s           2026-03-19T16:35:14
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.20s           2026-03-19T16:35:14
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.18s           2026-03-19T16:35:14
+================================================================================
+[2026-03-19T16:35:45.277+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.45s           2026-03-19T16:35:33
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.93s           2026-03-19T16:35:27
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.91s           2026-03-19T16:35:28
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.30s           2026-03-19T16:35:44
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.29s           2026-03-19T16:35:45
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.22s           2026-03-19T16:35:44
+================================================================================
+[2026-03-19T16:36:15.291+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.33s           2026-03-19T16:36:05
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.15s           2026-03-19T16:35:58
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.11s           2026-03-19T16:35:59
+/opt/airflow/dags/full_pipeline_dag.py   2607  0.04s             1           0  0.30s           2026-03-19T16:35:44
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.29s           2026-03-19T16:35:45
+/opt/airflow/dags/spark_jobs_dag.py      2610  0.01s             1           0  0.22s           2026-03-19T16:35:44
+================================================================================
+[2026-03-19T16:36:37.864+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-19T16:36:37.945+0000] {manager.py:740} INFO - There are 6 files in /opt/airflow/dags
+[2026-03-19T16:36:46.189+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.25s           2026-03-19T16:36:36
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.07s           2026-03-19T16:36:29
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.87s           2026-03-19T16:36:30
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.27s           2026-03-19T16:36:15
+/opt/airflow/dags/spark_jobs_dag.py      2643  0.01s             1           0  0.21s           2026-03-19T16:36:15
+/opt/airflow/dags/full_pipeline_dag.py   2640  0.07s             1           0  0.20s           2026-03-19T16:36:15
+================================================================================
+[2026-03-19T16:37:16.718+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.60s           2026-03-19T16:37:08
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.97s           2026-03-19T16:37:00
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.96s           2026-03-19T16:37:01
+/opt/airflow/dags/full_pipeline_dag.py   2673  0.03s             1           0  0.30s           2026-03-19T16:36:46
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.28s           2026-03-19T16:36:46
+/opt/airflow/dags/spark_jobs_dag.py      2676  0.01s             1           0  0.22s           2026-03-19T16:36:46
+================================================================================
+[2026-03-19T16:37:47.250+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.12s           2026-03-19T16:37:40
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.11s           2026-03-19T16:37:32
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.82s           2026-03-19T16:37:32
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.20s           2026-03-19T16:37:17
+/opt/airflow/dags/full_pipeline_dag.py   2706  0.06s             1           0  0.19s           2026-03-19T16:37:16
+/opt/airflow/dags/spark_jobs_dag.py      2709  0.01s             1           0  0.17s           2026-03-19T16:37:16
+================================================================================
+[2026-03-19T16:38:17.770+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.21s           2026-03-19T16:38:11
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.94s           2026-03-19T16:38:04
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.92s           2026-03-19T16:38:03
+/opt/airflow/dags/full_pipeline_dag.py   2739  0.03s             1           0  0.23s           2026-03-19T16:37:47
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:37:47
+/opt/airflow/dags/spark_jobs_dag.py      2742  0.01s             1           0  0.19s           2026-03-19T16:37:47
+================================================================================
+[2026-03-19T16:38:48.692+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.28s           2026-03-19T16:38:43
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.01s           2026-03-19T16:38:35
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.95s           2026-03-19T16:38:36
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.24s           2026-03-19T16:38:18
+/opt/airflow/dags/full_pipeline_dag.py   2772  0.04s             1           0  0.24s           2026-03-19T16:38:17
+/opt/airflow/dags/spark_jobs_dag.py      2775  0.01s             1           0  0.22s           2026-03-19T16:38:17
+================================================================================
+[2026-03-19T16:39:19.468+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.22s           2026-03-19T16:39:15
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.97s           2026-03-19T16:39:07
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.89s           2026-03-19T16:39:06
+/opt/airflow/dags/full_pipeline_dag.py   2805  0.03s             1           0  0.29s           2026-03-19T16:38:48
+/opt/airflow/dags/spark_jobs_dag.py      2808  0.01s             1           0  0.24s           2026-03-19T16:38:48
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.24s           2026-03-19T16:38:49
+================================================================================
+[2026-03-19T16:39:49.984+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.28s           2026-03-19T16:39:47
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.94s           2026-03-19T16:39:37
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.92s           2026-03-19T16:39:38
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.23s           2026-03-19T16:39:19
+/opt/airflow/dags/full_pipeline_dag.py   2838  0.05s             1           0  0.21s           2026-03-19T16:39:19
+/opt/airflow/dags/spark_jobs_dag.py      2841  0.03s             1           0  0.17s           2026-03-19T16:39:19
+================================================================================
+[2026-03-19T16:40:20.732+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.27s           2026-03-19T16:40:18
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.05s           2026-03-19T16:40:09
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.94s           2026-03-19T16:40:10
+/opt/airflow/dags/spark_jobs_dag.py      2874  0.01s             1           0  0.25s           2026-03-19T16:39:50
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.23s           2026-03-19T16:39:50
+/opt/airflow/dags/full_pipeline_dag.py   2871  0.03s             1           0  0.20s           2026-03-19T16:39:50
+================================================================================
+[2026-03-19T16:40:51.280+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.24s           2026-03-19T16:40:50
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.93s           2026-03-19T16:40:41
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.92s           2026-03-19T16:40:42
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.23s           2026-03-19T16:40:21
+/opt/airflow/dags/full_pipeline_dag.py   2904  0.03s             1           0  0.22s           2026-03-19T16:40:20
+/opt/airflow/dags/spark_jobs_dag.py      2907  0.01s             1           0  0.20s           2026-03-19T16:40:20
+================================================================================
+[2026-03-19T16:41:21.857+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py      2931  1.04s             1           0  1.24s           2026-03-19T16:40:50
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.11s           2026-03-19T16:41:12
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.92s           2026-03-19T16:41:13
+/opt/airflow/dags/full_pipeline_dag.py   2935  0.01s             1           0  0.24s           2026-03-19T16:40:51
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:40:51
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.20s           2026-03-19T16:40:51
+================================================================================
+[2026-03-19T16:41:38.468+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-19T16:41:38.579+0000] {manager.py:740} INFO - There are 6 files in /opt/airflow/dags
+[2026-03-19T16:41:52.773+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.43s           2026-03-19T16:41:22
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.98s           2026-03-19T16:41:44
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.93s           2026-03-19T16:41:45
+/opt/airflow/dags/full_pipeline_dag.py   2964  0.05s             1           0  0.35s           2026-03-19T16:41:22
+/opt/airflow/dags/spark_jobs_dag.py      2967  0.03s             1           0  0.23s           2026-03-19T16:41:22
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.19s           2026-03-19T16:41:22
+================================================================================
+[2026-03-19T16:42:23.667+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.25s           2026-03-19T16:41:54
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.01s           2026-03-19T16:42:15
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.88s           2026-03-19T16:42:16
+/opt/airflow/dags/spark_jobs_dag.py      3000  0.01s             1           0  0.22s           2026-03-19T16:41:52
+/opt/airflow/dags/full_pipeline_dag.py   2997  0.06s             1           0  0.22s           2026-03-19T16:41:52
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.20s           2026-03-19T16:41:53
+================================================================================
+[2026-03-19T16:42:54.039+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.69s           2026-03-19T16:42:48
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.46s           2026-03-19T16:42:47
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.44s           2026-03-19T16:42:26
+/opt/airflow/dags/full_pipeline_dag.py   3030  0.03s             1           0  0.32s           2026-03-19T16:42:23
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.24s           2026-03-19T16:42:24
+/opt/airflow/dags/spark_jobs_dag.py      3033  0.01s             1           0  0.24s           2026-03-19T16:42:23
+================================================================================
+[2026-03-19T16:43:24.076+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.25s           2026-03-19T16:42:57
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.97s           2026-03-19T16:43:18
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.93s           2026-03-19T16:43:19
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.24s           2026-03-19T16:42:54
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.22s           2026-03-19T16:42:54
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.19s           2026-03-19T16:42:54
+================================================================================
+[2026-03-19T16:43:54.675+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.25s           2026-03-19T16:43:29
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.13s           2026-03-19T16:43:50
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.93s           2026-03-19T16:43:51
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.25s           2026-03-19T16:43:25
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.21s           2026-03-19T16:43:25
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.20s           2026-03-19T16:43:25
+================================================================================
+[2026-03-19T16:44:25.543+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.28s           2026-03-19T16:44:01
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.08s           2026-03-19T16:44:22
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.99s           2026-03-19T16:44:23
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:43:56
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.21s           2026-03-19T16:43:55
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.17s           2026-03-19T16:43:55
+================================================================================
+[2026-03-19T16:44:56.003+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.21s           2026-03-19T16:44:33
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.93s           2026-03-19T16:44:54
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.86s           2026-03-19T16:44:54
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:44:27
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.21s           2026-03-19T16:44:26
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.20s           2026-03-19T16:44:26
+================================================================================
+[2026-03-19T16:45:26.779+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.27s           2026-03-19T16:45:04
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.96s           2026-03-19T16:45:25
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.93s           2026-03-19T16:45:26
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:44:57
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.21s           2026-03-19T16:44:57
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.19s           2026-03-19T16:44:57
+================================================================================
+[2026-03-19T16:45:57.580+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.34s           2026-03-19T16:45:36
+/opt/airflow/dags/macro_etl_dag.py       3222  0.01s             1           0  0.93s           2026-03-19T16:45:26
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.90s           2026-03-19T16:45:57
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.22s           2026-03-19T16:45:28
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:45:28
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.20s           2026-03-19T16:45:28
+================================================================================
+[2026-03-19T16:46:28.265+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.23s           2026-03-19T16:46:08
+/opt/airflow/dags/staging_etl_dag.py     3249  0.01s             1           0  0.90s           2026-03-19T16:45:57
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.86s           2026-03-19T16:45:58
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.20s           2026-03-19T16:45:58
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.19s           2026-03-19T16:45:58
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.17s           2026-03-19T16:45:58
+================================================================================
+[2026-03-19T16:46:38.524+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-19T16:46:38.623+0000] {manager.py:740} INFO - There are 6 files in /opt/airflow/dags
+[2026-03-19T16:46:58.388+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.49s           2026-03-19T16:46:40
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.01s           2026-03-19T16:46:29
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.89s           2026-03-19T16:46:30
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.23s           2026-03-19T16:46:29
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.21s           2026-03-19T16:46:29
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.19s           2026-03-19T16:46:29
+================================================================================
+[2026-03-19T16:47:29.214+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.39s           2026-03-19T16:47:12
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.95s           2026-03-19T16:47:00
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.71s           2026-03-19T16:47:01
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.21s           2026-03-19T16:47:00
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.21s           2026-03-19T16:47:00
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.19s           2026-03-19T16:47:00
+================================================================================
+[2026-03-19T16:47:59.381+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.46s           2026-03-19T16:47:43
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.22s           2026-03-19T16:47:32
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.19s           2026-03-19T16:47:32
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.28s           2026-03-19T16:47:31
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.25s           2026-03-19T16:47:31
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.23s           2026-03-19T16:47:31
+================================================================================
+[2026-03-19T16:48:29.443+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.28s           2026-03-19T16:48:15
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.93s           2026-03-19T16:48:04
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.92s           2026-03-19T16:48:04
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.27s           2026-03-19T16:48:02
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.22s           2026-03-19T16:48:02
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.21s           2026-03-19T16:48:02
+================================================================================
+[2026-03-19T16:48:59.717+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.49s           2026-03-19T16:48:47
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.08s           2026-03-19T16:48:35
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.03s           2026-03-19T16:48:35
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.26s           2026-03-19T16:48:32
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.25s           2026-03-19T16:48:33
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.24s           2026-03-19T16:48:32
+================================================================================
+[2026-03-19T16:49:29.801+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.24s           2026-03-19T16:49:18
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.80s           2026-03-19T16:49:07
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.79s           2026-03-19T16:49:07
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.21s           2026-03-19T16:49:03
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.20s           2026-03-19T16:49:03
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.17s           2026-03-19T16:49:03
+================================================================================
+[2026-03-19T16:50:00.586+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.25s           2026-03-19T16:49:50
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.06s           2026-03-19T16:49:39
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.02s           2026-03-19T16:49:39
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.28s           2026-03-19T16:49:34
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.26s           2026-03-19T16:49:34
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.23s           2026-03-19T16:49:34
+================================================================================
+[2026-03-19T16:50:31.007+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.31s           2026-03-19T16:50:22
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.75s           2026-03-19T16:50:10
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.73s           2026-03-19T16:50:10
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.26s           2026-03-19T16:50:04
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.24s           2026-03-19T16:50:04
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.21s           2026-03-19T16:50:05
+================================================================================
+[2026-03-19T16:51:01.109+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.40s           2026-03-19T16:50:54
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.08s           2026-03-19T16:50:41
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.96s           2026-03-19T16:50:42
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.29s           2026-03-19T16:50:35
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.27s           2026-03-19T16:50:35
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.23s           2026-03-19T16:50:35
+================================================================================
+[2026-03-19T16:51:31.589+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.23s           2026-03-19T16:51:25
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.75s           2026-03-19T16:51:13
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.75s           2026-03-19T16:51:13
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.28s           2026-03-19T16:51:06
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.25s           2026-03-19T16:51:06
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.25s           2026-03-19T16:51:06
+================================================================================
+[2026-03-19T16:51:38.958+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-19T16:51:39.077+0000] {manager.py:740} INFO - There are 6 files in /opt/airflow/dags
+[2026-03-19T16:52:01.885+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.47s           2026-03-19T16:51:57
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.98s           2026-03-19T16:51:45
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.96s           2026-03-19T16:51:45
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.20s           2026-03-19T16:51:36
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.20s           2026-03-19T16:51:37
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.19s           2026-03-19T16:51:36
+================================================================================
+[2026-03-19T16:52:32.614+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.30s           2026-03-19T16:52:29
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.04s           2026-03-19T16:52:16
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.98s           2026-03-19T16:52:16
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.23s           2026-03-19T16:52:07
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.21s           2026-03-19T16:52:07
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.20s           2026-03-19T16:52:07
+================================================================================
+[2026-03-19T16:53:02.694+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.33s           2026-03-19T16:53:01
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.18s           2026-03-19T16:52:48
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.16s           2026-03-19T16:52:48
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.24s           2026-03-19T16:52:38
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.22s           2026-03-19T16:52:37
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.21s           2026-03-19T16:52:37
+================================================================================
+[2026-03-19T16:53:33.185+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py      3705  1.02s             1           0  1.33s           2026-03-19T16:53:01
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.01s           2026-03-19T16:53:20
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.99s           2026-03-19T16:53:19
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.25s           2026-03-19T16:53:08
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.24s           2026-03-19T16:53:09
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.21s           2026-03-19T16:53:08
+================================================================================
+[2026-03-19T16:54:03.943+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py      3738  0.01s             1           0  1.26s           2026-03-19T16:53:33
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.06s           2026-03-19T16:53:51
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.04s           2026-03-19T16:53:51
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.23s           2026-03-19T16:53:39
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:53:39
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.21s           2026-03-19T16:53:39
+================================================================================
+[2026-03-19T16:54:34.659+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.25s           2026-03-19T16:54:05
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.16s           2026-03-19T16:54:23
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.13s           2026-03-19T16:54:23
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.22s           2026-03-19T16:54:10
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.22s           2026-03-19T16:54:10
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:54:10
+================================================================================
+[2026-03-19T16:55:05.343+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.24s           2026-03-19T16:54:36
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.93s           2026-03-19T16:54:55
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.89s           2026-03-19T16:54:55
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.22s           2026-03-19T16:54:41
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.21s           2026-03-19T16:54:41
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.20s           2026-03-19T16:54:41
+================================================================================
+[2026-03-19T16:55:35.921+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.26s           2026-03-19T16:55:08
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.93s           2026-03-19T16:55:26
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.91s           2026-03-19T16:55:26
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.22s           2026-03-19T16:55:11
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:55:11
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.18s           2026-03-19T16:55:11
+================================================================================
+[2026-03-19T16:56:06.636+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.24s           2026-03-19T16:55:40
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.19s           2026-03-19T16:55:58
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.16s           2026-03-19T16:55:58
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.22s           2026-03-19T16:55:42
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.20s           2026-03-19T16:55:42
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.18s           2026-03-19T16:55:42
+================================================================================
+[2026-03-19T16:56:37.513+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.41s           2026-03-19T16:56:12
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.12s           2026-03-19T16:56:30
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.10s           2026-03-19T16:56:30
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.23s           2026-03-19T16:56:13
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:56:13
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.19s           2026-03-19T16:56:13
+================================================================================
+[2026-03-19T16:56:39.528+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-03-19T16:56:39.649+0000] {manager.py:740} INFO - There are 6 files in /opt/airflow/dags
+[2026-03-19T16:57:07.555+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.32s           2026-03-19T16:56:44
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.00s           2026-03-19T16:57:01
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.97s           2026-03-19T16:57:01
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.26s           2026-03-19T16:56:44
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.21s           2026-03-19T16:56:44
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.20s           2026-03-19T16:56:44
+================================================================================
+[2026-03-19T16:57:38.454+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.32s           2026-03-19T16:57:16
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.93s           2026-03-19T16:57:33
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.92s           2026-03-19T16:57:33
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.28s           2026-03-19T16:57:14
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.24s           2026-03-19T16:57:14
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.22s           2026-03-19T16:57:15
+================================================================================
+[2026-03-19T16:58:08.512+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.33s           2026-03-19T16:57:48
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.93s           2026-03-19T16:58:04
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.91s           2026-03-19T16:58:04
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.28s           2026-03-19T16:57:45
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.26s           2026-03-19T16:57:45
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.25s           2026-03-19T16:57:46
+================================================================================
+[2026-03-19T16:58:38.564+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.36s           2026-03-19T16:58:20
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.09s           2026-03-19T16:58:35
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.08s           2026-03-19T16:58:35
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.26s           2026-03-19T16:58:16
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.25s           2026-03-19T16:58:17
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.24s           2026-03-19T16:58:16
+================================================================================
+[2026-03-19T16:59:08.817+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.57s           2026-03-19T16:58:52
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.02s           2026-03-19T16:59:06
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.01s           2026-03-19T16:59:06
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.27s           2026-03-19T16:58:47
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.25s           2026-03-19T16:58:47
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.20s           2026-03-19T16:58:48
+================================================================================
+[2026-03-19T16:59:39.477+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.17s           2026-03-19T16:59:24
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.98s           2026-03-19T16:59:38
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.97s           2026-03-19T16:59:38
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.25s           2026-03-19T16:59:18
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.25s           2026-03-19T16:59:18
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.20s           2026-03-19T16:59:18
+================================================================================
+[2026-03-19T17:00:09.619+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.48s           2026-03-19T16:59:56
+/opt/airflow/dags/staging_etl_dag.py                             1           0  0.99s           2026-03-19T17:00:09
+/opt/airflow/dags/macro_etl_dag.py                               1           0  0.98s           2026-03-19T17:00:09
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.24s           2026-03-19T16:59:48
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.19s           2026-03-19T16:59:48
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.18s           2026-03-19T16:59:49
+================================================================================
+[2026-03-19T17:00:40.344+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                 PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.56s           2026-03-19T17:00:28
+/opt/airflow/dags/staging_etl_dag.py     4155  0.03s             1           0  0.99s           2026-03-19T17:00:09
+/opt/airflow/dags/macro_etl_dag.py       4158  0.01s             1           0  0.98s           2026-03-19T17:00:09
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.30s           2026-03-19T17:00:20
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.30s           2026-03-19T17:00:19
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.24s           2026-03-19T17:00:19
+================================================================================
+[2026-03-19T17:01:10.565+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+--------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/market_etl_dag.py                              1           0  1.55s           2026-03-19T17:01:00
+/opt/airflow/dags/staging_etl_dag.py                             1           0  1.27s           2026-03-19T17:00:41
+/opt/airflow/dags/macro_etl_dag.py                               1           0  1.23s           2026-03-19T17:00:41
+/opt/airflow/dags/init_schema_dag.py                             1           0  0.21s           2026-03-19T17:00:50
+/opt/airflow/dags/full_pipeline_dag.py                           1           0  0.21s           2026-03-19T17:00:50
+/opt/airflow/dags/spark_jobs_dag.py                              1           0  0.19s           2026-03-19T17:00:50
+================================================================================

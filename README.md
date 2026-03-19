@@ -1,27 +1,26 @@
 # 📘 Finance Data Platform — Airflow-Orchestrated ETL (Work in Progress)
 
-A **containerized data platform** for collecting, transforming, and orchestrating financial and macroeconomic datasets.
+A containerized data engineering platform for ingesting, staging, and transforming financial and macroeconomic datasets using Apache Airflow and Apache Spark, fully orchestrated through Docker.
+Phase 1 delivers a stable, production‑style foundation for a modern data platform, including:
+- A complete Airflow orchestration layer
+- A modular Python ETL ingestion pipeline
+- A Spark transformation layer running inside Docker
+- A structured data lake with staged and curated zones
+- Clean project organization ready for expansion into a full lakehouse
 
-This version introduces:
-
-* A full **Airflow orchestration layer**
-* A reorganized **modular ETL architecture**
-* A **Dockerized environment** for reproducible development
-* A scalable foundation for future **data engineering and analytics components**
 
 ---
 
-# 🚀 What’s New in This Version
+# 🚀 What’s New in Phase 1
 
-## ✔ Airflow Orchestration Layer
-
-A fully containerized **Apache Airflow environment** running:
-
-* Webserver
-* Scheduler
-* PostgreSQL metadata database
-* Custom Airflow image with project-specific Python dependencies
-* DAGs for macro, market, staging, and full-pipeline orchestration
+## ✔ Fully Containerized Airflow Environment
+A complete Airflow stack running inside Docker:
+• 	Webserver
+• 	Scheduler
+• 	PostgreSQL metadata DB
+• 	Custom Airflow image with project‑specific dependencies
+• 	DAGs for macro ETL, market ETL, staging, and full‑pipeline orchestration
+This provides reproducible, dependency‑aware execution across all workflows.
 
 ---
 
@@ -38,16 +37,27 @@ This modular structure makes it easier to extend the pipeline and reuse componen
 
 ---
 
+## ✔ Spark Transformation Layer (NEW)
+Phase 1 introduces a Dockerized Spark runtime that performs heavy transformations:
+- Spark jobs run inside a dedicated container (spark-spark)
+- Airflow triggers Spark jobs via DockerOperator
+- Data is read from /data/stage/ and written to /data/curated/
+- Clean job routing via run_job.py
+- Modular Spark jobs in spark_jobs/
+This is the foundation for Phase 2’s lakehouse and Delta Lake integration.
+
+---
+
 ## ✔ Full Pipeline DAG
+The unified DAG (full_pipeline_dag.py) orchestrates:
+- Schema initialization
+- Macro ETL
+- Market ETL
+- Staging
+- Spark transformations
+This ensures deterministic, dependency‑aware execution of the entire platform.
 
-A unified Airflow DAG (`full_pipeline_dag.py`) orchestrates:
 
-1. Extract
-2. Transform
-3. Stage
-4. Load
-
-This ensures **reproducible, dependency-aware execution** of the entire pipeline.
 
 ---
 
@@ -182,8 +192,9 @@ Make sure to create your own `.env` file before running the platform.
 
 This platform is actively evolving. Planned components include:
 
-* [ ] **Apache Spark cluster** for distributed transformations
-* [ ] **Data lake architecture** (raw / delta / curated zones)
+* [ ] **Delta Lake** (ACID transactions, schema evolution, time travel)
+* [ ] **Data lake zones** (raw → stage → curated → gold)
+* [ ] **Data quality checks** (Great Expectations or Spark validators)
 * [ ] **Dashboard layer** (Dash / Streamlit / Superset)
 * [ ] **CI/CD pipeline** for automated deployment
 * [ ] **Monitoring and logging**

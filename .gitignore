@@ -1,2 +1,19 @@
-.env".env" 
-".env" 
+# Ignore real env files
+.env
+.env.*
+*.env
+
+# Keep example env files
+!.env.example
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Airflow logs
+logs/
+airflow_logs/
+
+# Docker artifacts
+*.pid
+*.log

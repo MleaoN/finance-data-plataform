@@ -7,10 +7,18 @@ services:
       dockerfile: Dockerfile
     container_name: spark
     environment:
-      - SPARK_MODE=client
+      SPARK_MODE: client
+      SPARK_MASTER_HOST: spark
+      PYTHONUNBUFFERED: "1"
     volumes:
       - ../ETL:/opt/app/ETL
       - ../data:/opt/app/data
       - ./spark_jobs:/opt/app/spark_jobs
     working_dir: /opt/app
-    command: ["sleep", "infinity"]
+    command: ["/bin/bash", "-c", "tail -f /dev/null"]
+    networks:
+      - spark_net
+
+networks:
+  spark_net:
+    driver: bridge

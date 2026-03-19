@@ -15,6 +15,8 @@ services:
       test: ["CMD-SHELL", "pg_isready -U airflow"]
       interval: 5s
       retries: 5
+    networks:
+      - spark_net
 
   airflow-init:
     build:
@@ -38,6 +40,8 @@ services:
     depends_on:
       airflow-postgres:
         condition: service_healthy
+    networks:
+      - spark_net
 
   airflow-webserver:
     build:
@@ -47,22 +51,25 @@ services:
     ports:
       - "8080:8080"
     env_file:
-      - ../.env
+      - .env_Airflow
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-postgres/airflow
       PYTHONPATH: /opt/airflow
     volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
       - ./dags:/opt/airflow/dags
       - ../ETL:/opt/airflow/ETL
       - ../data:/opt/airflow/data
       - ./logs:/opt/airflow/logs
-      - ./sql:/opt/airflow/sql 
+      - ./sql:/opt/airflow/sql
     depends_on:
       airflow-postgres:
         condition: service_healthy
       airflow-init:
         condition: service_completed_successfully
+    networks:
+      - spark_net
 
   airflow-scheduler:
     build:
@@ -76,16 +83,23 @@ services:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@airflow-postgres/airflow
       PYTHONPATH: /opt/airflow
     volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
       - ./dags:/opt/airflow/dags
       - ../ETL:/opt/airflow/ETL
       - ../data:/opt/airflow/data
       - ./logs:/opt/airflow/logs
-      - ./sql:/opt/airflow/sql 
+      - ./sql:/opt/airflow/sql
     depends_on:
       airflow-postgres:
         condition: service_healthy
       airflow-init:
         condition: service_completed_successfully
-        
+    networks:
+      - spark_net
+
 volumes:
   postgres_data:
+
+networks:
+  spark_net:
+    external: true

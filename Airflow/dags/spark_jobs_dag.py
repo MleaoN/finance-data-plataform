@@ -1,49 +1,22 @@
 from airflow import DAG
-from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from airflow.providers.docker.operators.docker import DockerOperator
 from docker.types import Mount
-from datetime import datetime, timedelta
+from datetime import datetime
 
 default_args = {
-    "owner": "marcelo",
-    "retries": 1,
-    "retry_delay": timedelta(minutes=5),
+    "owner": "airflow",
+    "start_date": datetime(2024, 1, 1),
 }
 
 with DAG(
-    dag_id="full_pipeline_dag",
+    dag_id="spark_jobs_dag",
     default_args=default_args,
-    start_date=datetime(2024, 1, 1),
-    schedule_interval="@daily",
+    schedule_interval=None,
     catchup=False,
-    tags=["pipeline", "orchestration", "etl"],
 ) as dag:
 
     # -------------------------
-    # ETL DAG TRIGGERS
-    # -------------------------
-    trigger_schema = TriggerDagRunOperator(
-        task_id="trigger_schema_init",
-        trigger_dag_id="init_schema",
-    )
-
-    trigger_macro = TriggerDagRunOperator(
-        task_id="trigger_macro_etl",
-        trigger_dag_id="macro_etl_pipeline",
-    )
-
-    trigger_market = TriggerDagRunOperator(
-        task_id="trigger_market_etl",
-        trigger_dag_id="market_etl_pipeline",
-    )
-
-    trigger_staging = TriggerDagRunOperator(
-        task_id="trigger_staging_etl",
-        trigger_dag_id="staging_etl_pipeline",
-    )
-
-    # -------------------------
-    # SPARK MOUNTS
+    # MOUNTS
     # -------------------------
 
     # Mount for Spark job scripts
@@ -63,7 +36,7 @@ with DAG(
     shared_mounts = [spark_code_mount, spark_data_mount]
 
     # -------------------------
-    # SPARK JOBS
+    # SPARK JOB: MARKET
     # -------------------------
     spark_market = DockerOperator(
         task_id="spark_market",
@@ -76,6 +49,9 @@ with DAG(
         mounts=shared_mounts,
     )
 
+    # -------------------------
+    # SPARK JOB: MACRO
+    # -------------------------
     spark_macro = DockerOperator(
         task_id="spark_macro",
         image="spark-spark",
@@ -87,11 +63,5 @@ with DAG(
         mounts=shared_mounts,
     )
 
-    # -------------------------
-    # PIPELINE ORDER
-    # -------------------------
-    trigger_schema >> trigger_macro >> trigger_market >> trigger_staging
-
-    # Spark runs AFTER staging ETL
-    trigger_staging >> spark_market
-    trigger_staging >> spark_macro
+    # Task order
+    spark_market >> spark_macro
